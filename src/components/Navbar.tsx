@@ -1,12 +1,10 @@
 import React from "react";
 
-type Props = {};
-
 const navItems = ["Solutions", "Products", "Resources", "Company", "Blog"];
 
 const NavItem = ({ link }: any) => <li className="text-gray-400">{link}</li>;
 
-const Navbar = (props: Props) => {
+const Navbar = () => {
   return (
     <header className="py-4 border-b px-20">
       <nav className="grid grid-cols-12  items-center gap-4">
@@ -15,7 +13,9 @@ const Navbar = (props: Props) => {
         </div>
         <ul className="col-span-6 flex gap-x-8">
           {navItems.map((link) => (
-            <NavItem link={link} />
+            <div key={link}>
+              <NavItem link={link} />
+            </div>
           ))}
         </ul>
         <div className="col-span-3 flex justify-end gap-8">

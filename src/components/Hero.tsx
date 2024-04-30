@@ -1,12 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-type Props = {};
-const navItems = ["Solutions", "Products", "Resources", "Company", "Blog"];
-
-const NavItem = ({ link }: any) => <li className="text-neutral-400">{link}</li>;
-
-const Hero = (props: Props) => {
+const Hero = () => {
   return (
     <section className="p-20">
       <div className="grid grid-cols-12  items-start gap-4">
